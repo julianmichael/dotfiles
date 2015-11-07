@@ -18,6 +18,8 @@
     ~/.sbt/0.13/plugins/plugins.sbt:
       create: true
       path: files/sbt/0.13/plugins/plugins.sbt
+    bin/osx-config: src/osx-config
+    bin/git-remote-dropbox: src/git-remote-dropbox/git-remote-dropbox
 
 - shell:
     - mkdir -p files/vim/{backups,swaps,undo}

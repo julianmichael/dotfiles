@@ -1,3 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "src/git-remote-dropbox"]
+	path = src/git-remote-dropbox
+	url = git@github.com:anishathalye/git-remote-dropbox.git
