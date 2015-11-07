@@ -17,6 +17,4 @@
     ~/.wgetrc: files/wgetrc
 
 - shell:
-    - mkdir -p files/vim/backups
-    - mkdir -p files/vim/swaps
-    - mkdir -p files/vim/undo
+    - mkdir -p files/vim/{backups,swaps,undo}
