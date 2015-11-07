@@ -1,17 +1,17 @@
 - clean: ['~']
 
 - link:
-  ~/.dotfiles: ''
-  ~/.aliases: files/aliases
-  ~/.bash_profile: files/bash_profile
-  ~/.bash_prompt: files/bash_prompt
-  ~/.bashrc: files/bashrc
-  ~/.exports: files/exports
-  ~/.gitconfig: files/gitconfig
-  ~/.gitignore-global: files/gitignore-global
-  ~/.inputrc: files/inputrc
-  ~/.path: files/path
-  ~/.toprc: files/toprc
-  ~/.vim: files/vim
-  ~/.vimrc: files/vimrc
-  ~/.wgetrc: files/wgetrc
+    ~/.dotfiles: ''
+    ~/.aliases: files/aliases
+    ~/.bash_profile: files/bash_profile
+    ~/.bash_prompt: files/bash_prompt
+    ~/.bashrc: files/bashrc
+    ~/.exports: files/exports
+    ~/.gitconfig: files/gitconfig
+    ~/.gitignore-global: files/gitignore-global
+    ~/.inputrc: files/inputrc
+    ~/.path: files/path
+    ~/.toprc: files/toprc
+    ~/.vim: files/vim/
+    ~/.vimrc: files/vimrc
+    ~/.wgetrc: files/wgetrc
