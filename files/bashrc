@@ -1,0 +1,98 @@
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+#-------------------------------------------------------------------------------
+# Shell options
+#-------------------------------------------------------------------------------
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Allow hidden files to show in completion
+shopt -s dotglob
+
+# Don't try to complete a command I haven't even started typing!
+shopt -s no_empty_cmd_completion
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# Save multi-lines in multi-line commands
+shopt -s cmdhist
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+# Allow cd'ing into variables (if the argument is not an existent path)
+shopt -s cdable_vars
+
+# Enable some Bash 4 features when possible:
+# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+# * Recursive globbing, e.g. `echo **/*.txt`
+for option in autocd globstar; do
+	shopt -s "$option" 2> /dev/null;
+done;
+
+# Check the window size after each command and, if necessary, update the values
+# of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Allow fancy prompt expansion for fancy prompts!
+shopt -s promptvars
+
+# Greater globbing abilities: ?*+@! in front of a parenthesized |-separated list
+# patterns (aka normal unix globbies). Also necessary for some completion stuff.
+shopt -s extglob
+
+# Enable these once again when I'm finally reading my mail from the terminal
+shopt -u mailwarn
+unset MAILCHECK
+
+# Make sourcing files easier by searching the PATH for its argument
+shopt -s sourcepath
+
+#-------------------------------------------------------------------------------
+# Completion
+#-------------------------------------------------------------------------------
+
+# Add tab completion for many Bash commands (if we have homebrew)
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+	source "$(brew --prefix)/etc/bash_completion";
+elif [ -f /etc/bash_completion ]; then
+	source /etc/bash_completion;
+fi;
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && \
+  complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | \
+  grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
+
+# SSH auto-completion based on entries in known_hosts.
+if [[ -e ~/.ssh/known_hosts ]]; then
+  complete -o default -W "$(cat ~/.ssh/known_hosts | \
+  sed 's/[, ].*//' | sort | uniq | grep -v '[0-9]')" ssh scp sftp
+fi
+
+#-------------------------------------------------------------------------------
+# OSX-Specific
+#-------------------------------------------------------------------------------
+
+# OSX-only stuff. Abort if not OSX.
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+  # Add tab completion for `defaults read|write NSGlobalDomain`
+  # You could just use `-g` instead, but I like being explicit
+  complete -W "NSGlobalDomain" defaults;
+
+  # Add `killall` tab completion for common apps
+  complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+fi
+
+#-------------------------------------------------------------------------------
+# Vim fix: this is to fix an issue with backspace in tmux on some systems
+#-------------------------------------------------------------------------------
+# stty erase 

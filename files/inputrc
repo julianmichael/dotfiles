@@ -1,0 +1,62 @@
+# Make everything like vim
+set editing-mode vi
+
+# ------------------------------------------------------------------------------
+# Options
+# ------------------------------------------------------------------------------
+
+# Make Tab autocomplete regardless of filename case
+set completion-ignore-case on
+
+# If there are more than 200 possible completions for a word, ask before showing
+set completion-query-items 200
+
+# Don't expand ~. It's distracting.
+set expand-tilde off
+
+# Immediately add a trailing slash when autocompleting symlinks to directories
+set mark-directories on
+set mark-symlinked-directories on
+
+# List all matches in case multiple possible completions are possible
+set show-all-if-ambiguous on
+
+# Show all autocomplete results at once
+set page-completions off
+
+# Mark file types in completion suggestions
+# TODO (figure out how this interacts with mark-symlinked-directories)
+set visible-stats on
+
+# Allow UTF-8 input and output, instead of showing stuff like $'\0123\0456'
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# ------------------------------------------------------------------------------
+# Bash 4 Only
+# ------------------------------------------------------------------------------
+
+# Be more intelligent when autocompleting by also looking at the text after
+# the cursor. For example, when the current line is "cd ~/src/mozil", and
+# the cursor is on the "z", pressing Tab will not autocomplete it to "cd
+# ~/src/mozillail", but to "cd ~/src/mozilla". (This is supported by the
+# Readline used by Bash 4.)
+set skip-completed-text on
+
+# ------------------------------------------------------------------------------
+# Commands
+# ------------------------------------------------------------------------------
+
+# Use the text that has already been typed as the prefix for searching through
+# commands (i.e. more intelligent Up/Down behavior)
+# "\e[B": history-search-forward
+# "\e[A": history-search-backward
+
+# Use Ctrl-Backspace to delete previous word (treating / as a word delimiter!)
+# TODO make this work. Doesn't seem to work.
+# Control-Rubout: unix-filename-rubout
+
+# Use Alt/Meta + Delete to delete the preceding word
+# TODO make this work. This doesn't seem to work either!
+# "\e[3;3~": kill-word

@@ -1,0 +1,45 @@
+# Make vim the default editor
+export EDITOR="vim";
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
+# Prefer US English and use UTF-8
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+
+#-------------------------------------------------------------------------------
+# Tailoring 'less'
+#-------------------------------------------------------------------------------
+
+alias more='less'
+export PAGER=less
+export LESSCHARSET='latin1'
+export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
+                # Use this if lesspipe.sh exists.
+export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
+:stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
+
+# LESS man page colors (makes Man pages more readable).
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md="${bold}${yellow}";
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so="${bold}${blue}"
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us="${bold}${purple}"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto";
+
+#-------------------------------------------------------------------------------
+# OSX-Specific Stuff
+#-------------------------------------------------------------------------------
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+  # Link Homebrew casks in `/Applications` rather than `~/Applications`
+  export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+fi
