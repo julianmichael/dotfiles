@@ -15,3 +15,8 @@
     ~/.vim: files/vim/
     ~/.vimrc: files/vimrc
     ~/.wgetrc: files/wgetrc
+
+- shell:
+    - mkdir -p files/vim/backups
+    - mkdir -p files/vim/swaps
+    - mkdir -p files/vim/undo
