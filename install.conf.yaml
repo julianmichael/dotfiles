@@ -6,6 +6,7 @@
     ~/.bash_profile: files/bash_profile
     ~/.bash_prompt: files/bash_prompt
     ~/.bashrc: files/bashrc
+    ~/.emacs.d: src/spacemacs
     ~/.exports: files/exports
     ~/.gitconfig: files/gitconfig
     ~/.gitignore-global: files/gitignore-global
