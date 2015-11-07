@@ -15,6 +15,9 @@
     ~/.vim: files/vim/
     ~/.vimrc: files/vimrc
     ~/.wgetrc: files/wgetrc
+    ~/.sbt/0.13/plugins/plugins.sbt:
+      create: true
+      path: files/sbt/0.13/plugins/plugins.sbt
 
 - shell:
     - mkdir -p files/vim/{backups,swaps,undo}
