@@ -2,26 +2,43 @@
 
 - link:
     ~/.dotfiles: ''
+
     ~/.aliases: files/aliases
     ~/.bash_profile: files/bash_profile
     ~/.bash_prompt: files/bash_prompt
     ~/.bashrc: files/bashrc
-    ~/.emacs.d: src/spacemacs
     ~/.exports: files/exports
-    ~/.gitconfig: files/gitconfig
-    ~/.gitignore-global: files/gitignore-global
     ~/.inputrc: files/inputrc
     ~/.path: files/path
+    ~/.toprc: files/toprc
+    ~/.wgetrc: files/wgetrc
+
+    ~/.gitconfig: files/gitconfig
+    ~/.gitignore-global: files/gitignore-global
+
     ~/.sbt/0.13/plugins/plugins.sbt:
       create: true
       path: files/sbt/0.13/plugins/plugins.sbt
+
+    ~/.emacs.d: src/spacemacs
     ~/.spacemacs: files/spacemacs
-    ~/.toprc: files/toprc
-    ~/.vim: files/vim/
+
     ~/.vimrc: files/vimrc
-    ~/.wgetrc: files/wgetrc
-    bin/osx-config: src/osx-config
+    ~/.vim: files/vim/
+    ~/.vim/autoload/pathogen.vim:
+      create: true
+      path: src/vim-pathogen/autoload/pathogen.vim
+    ~/.vim/bundle/vim-scala:
+      create: true
+      path: src/vim-scala/
+
     bin/git-remote-dropbox: src/git-remote-dropbox/git-remote-dropbox
+
+    bin/osx-config: src/osx-config
+
+    ~/Library/Application Support/Karabiner/private.xml:
+      create: true
+      path: files/karabiner/private.xml
 
 - shell:
     - mkdir -p files/vim/{backups,swaps,undo}

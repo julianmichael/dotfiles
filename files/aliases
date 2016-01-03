@@ -1,3 +1,6 @@
+# I have gone to the dark side
+alias vim=emacsclient
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."

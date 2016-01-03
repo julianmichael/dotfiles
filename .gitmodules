@@ -7,3 +7,9 @@
 [submodule "src/spacemacs"]
 	path = src/spacemacs
 	url = https://github.com/syl20bnr/spacemacs.git
+[submodule "src/vim-pathogen"]
+	path = src/vim-pathogen
+	url = git@github.com:tpope/vim-pathogen.git
+[submodule "src/vim-scala"]
+	path = src/vim-scala
+	url = git@github.com:derekwyatt/vim-scala.git
