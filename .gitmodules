@@ -16,3 +16,6 @@
 [submodule "src/dropbox-sdk-python"]
 	path = src/dropbox-sdk-python
 	url = git@github.com:dropbox/dropbox-sdk-python.git
+[submodule "src/coquille"]
+	path = src/coquille
+	url = https://github.com/the-lambda-church/coquille.git
