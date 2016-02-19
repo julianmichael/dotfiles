@@ -24,7 +24,7 @@
     ~/.spacemacs: files/spacemacs
 
     ~/.vimrc: files/vimrc
-    ~/.vim: files/vim/
+    ~/.vim: files/vim
     ~/.vim/autoload/pathogen.vim:
       create: true
       path: src/vim-pathogen/autoload/pathogen.vim
