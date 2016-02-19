@@ -1,21 +1,21 @@
 [submodule "dotbot"]
 	path = dotbot
-	url = https://github.com/anishathalye/dotbot
+	url = https://github.com/anishathalye/dotbot.git
 [submodule "src/git-remote-dropbox"]
 	path = src/git-remote-dropbox
-	url = git@github.com:anishathalye/git-remote-dropbox.git
+	url = https://github.com/anishathalye/git-remote-dropbox.git
 [submodule "src/spacemacs"]
 	path = src/spacemacs
 	url = https://github.com/syl20bnr/spacemacs.git
 [submodule "src/vim-pathogen"]
 	path = src/vim-pathogen
-	url = git@github.com:tpope/vim-pathogen.git
+	url = https://github.com/tpope/vim-pathogen.git
 [submodule "src/vim-scala"]
 	path = src/vim-scala
-	url = git@github.com:derekwyatt/vim-scala.git
+	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "src/dropbox-sdk-python"]
 	path = src/dropbox-sdk-python
-	url = git@github.com:dropbox/dropbox-sdk-python.git
+	url = https://github.com/dropbox/dropbox-sdk-python.git
 [submodule "src/coquille"]
 	path = src/coquille
 	url = https://github.com/the-lambda-church/coquille.git
