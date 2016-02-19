@@ -31,6 +31,12 @@
     ~/.vim/bundle/vim-scala:
       create: true
       path: src/vim-scala/
+    ~/.vim/bundle/coquille:
+      create: true
+      path: src/coquille/
+    ~/.vim/bundle/vimbufsync:
+      create: true
+      path: src/vimbufsync/
 
     bin/git-remote-dropbox: src/git-remote-dropbox/git-remote-dropbox
 

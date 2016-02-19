@@ -13,3 +13,6 @@
 [submodule "src/vim-scala"]
 	path = src/vim-scala
 	url = git@github.com:derekwyatt/vim-scala.git
+[submodule "src/dropbox-sdk-python"]
+	path = src/dropbox-sdk-python
+	url = git@github.com:dropbox/dropbox-sdk-python.git
