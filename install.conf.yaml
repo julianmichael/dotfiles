@@ -2,7 +2,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - mkdir -p files/vim/{backups,swaps,undo}
 
 - link:
     ~/.dotfiles: ''
@@ -49,3 +48,6 @@
     ~/Library/Application Support/Karabiner/private.xml:
       create: true
       path: files/karabiner/private.xml
+
+- shell:
+  - mkdir -p files/vim/{backups,swaps,undo}
