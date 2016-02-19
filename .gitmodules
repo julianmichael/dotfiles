@@ -19,3 +19,6 @@
 [submodule "src/coquille"]
 	path = src/coquille
 	url = https://github.com/the-lambda-church/coquille.git
+[submodule "src/vimbufsync"]
+	path = src/vimbufsync
+	url = https://github.com/def-lkb/vimbufsync.git
