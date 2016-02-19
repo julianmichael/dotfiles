@@ -1,1 +1,1 @@
-/Users/julian/Documents/git/dotfiles/src/vim-pathogen/autoload/pathogen.vim
+../../../src/vim-pathogen/autoload/pathogen.vim

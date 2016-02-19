@@ -28,18 +28,6 @@
 
     ~/.vimrc: files/vimrc
     ~/.vim: files/vim
-    ~/.vim/autoload/pathogen.vim:
-      create: true
-      path: src/vim-pathogen/autoload/pathogen.vim
-    ~/.vim/bundle/vim-scala:
-      create: true
-      path: src/vim-scala/
-    ~/.vim/bundle/coquille:
-      create: true
-      path: src/coquille/
-    ~/.vim/bundle/vimbufsync:
-      create: true
-      path: src/vimbufsync/
 
     bin/git-remote-dropbox: src/git-remote-dropbox/git-remote-dropbox
 
