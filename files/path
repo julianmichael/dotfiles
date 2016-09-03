@@ -2,6 +2,8 @@
 export PATH="$HOME/.dotfiles/bin:$PATH";
 export PATH="$HOME/.dotfiles/local/bin:$PATH";
 
+# macports
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # why does port select not do this, ugh
 export PATH="/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin:$PATH"
 

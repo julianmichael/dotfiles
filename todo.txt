@@ -1,4 +1,5 @@
 
+install input mono
 http://input.fontbureau.com/build/?fontSelection=whole&a=0&g=0&i=0&l=0&zero=0&asterisk=0&braces=0&preset=default&line-height=1.2&accept=I+do&email=
 
 automatic three-finger drag
@@ -13,3 +14,23 @@ download seil? maybe not since we can already switch capslock and ctrl
 
 download Chrome
 Chrome as default browser
+
+ask for name and email and auto-generate gitconfig-custom and put somewhere .gitignored and add a thing in install.conf.yaml to put it in ~
+
+automatically do some port installation stuff
+
+fix emacsclient alias from vim
+give emacs/spacemacs alternate/backup editor vim
+
+install xcode automatically
+install LateX?
+
+generate SSH keys if necessary
+
+ports:
+
+tmux
+tmux-pasteboard
+tree
+emacs (necessary for spacemacs; must have new enough version of emacs)
+ag
