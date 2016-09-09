@@ -34,3 +34,7 @@ tmux-pasteboard
 tree
 emacs (necessary for spacemacs; must have new enough version of emacs)
 ag
+sbt
+scala
+scala_select
+the JDK
