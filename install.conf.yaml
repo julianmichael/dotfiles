@@ -40,4 +40,6 @@
       path: files/karabiner/private.xml
 
 - shell:
-  - mkdir -p files/vim/{backups,swaps,undo}
+  - mkdir -p files/vim/backups
+  - mkdir -p files/vim/swaps
+  - mkdir -p files/vim/undo
