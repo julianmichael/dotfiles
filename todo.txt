@@ -38,3 +38,7 @@ sbt
 scala
 scala_select
 the JDK
+
+npm:
+
+tldr
