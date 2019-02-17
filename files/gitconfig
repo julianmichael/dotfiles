@@ -156,3 +156,6 @@
 
 [push]
   default = simple
+[user]
+	name = Julian Michael
+	email = julianjohnmichael@gmail.com
