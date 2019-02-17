@@ -18,16 +18,12 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     yaml
      python
      racket
      typescript
      html
      javascript
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
      auto-completion
      emacs-lisp
      git
@@ -224,6 +220,11 @@ layers configuration. You are free to put any user code."
   (setq ensime-sem-high-enabled-p nil) ;; TODO get this working without looking ridiculous...
   (setq ensime-use-helm t)
   (setq ensime-startup-notification nil)
+
+  ;; scala .sc scripts
+  (progn
+    (add-to-list 'auto-mode-alist '("\\.sc\\'" . scala-mode))
+    (modify-coding-system-alist 'file "\\.sc\\'" 'utf-8))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
