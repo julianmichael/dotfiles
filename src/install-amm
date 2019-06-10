@@ -1,0 +1,4 @@
+#!/bin/bash
+AMM_VER=$1
+(echo '#!/usr/bin/env sh' && curl -L https://github.com/lihaoyi/Ammonite/releases/download/$AMM_VER/2.12-$AMM_VER) > ~/.dotfiles/local/bin/amm
+chmod +x ~/.dotfiles/local/bin/amm

@@ -32,8 +32,9 @@
     ~/.vim: files/vim
 
     bin/git-remote-dropbox: src/git-remote-dropbox/git-remote-dropbox
-
     bin/osx-config: src/osx-config
+    bin/install-mill: src/install-mill
+    bin/install-amm: src/install-amm
 
     ~/Library/Application Support/Karabiner/private.xml:
       create: true

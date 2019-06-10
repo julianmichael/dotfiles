@@ -1,0 +1,4 @@
+#!/bin/bash
+MILL_VER=$1
+(echo "#!/usr/bin/env sh" && curl -L https://github.com/lihaoyi/mill/releases/download/$MILL_VER/$MILL_VER) > ~/.dotfiles/local/bin/mill
+chmod +x ~/.dotfiles/local/bin/mill
