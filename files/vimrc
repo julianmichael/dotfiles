@@ -41,7 +41,7 @@ endif
 map - :nohls<cr>
 
 " Not sure what this does
-nnoremap JJJJ <Nop>
+" nnoremap JJJJ <Nop>
 " Set off the other paren
 highlight MatchParen ctermbg=4
 
@@ -50,6 +50,7 @@ nnoremap <silent> k gk
 nnoremap <silent> j gj
 inoremap <silent> <Up> <Esc>gka
 inoremap <silent> <Down> <Esc>gja
+imap fd <Esc>
 
 " Create Blank Newlines and stay in Normal mode
 nnoremap <silent> zj o<Esc>
@@ -92,8 +93,9 @@ set ignorecase
 set incsearch
 " Always show status line
 set laststatus=2
-" Enable mouse in all modes
-set mouse=a
+" Disable  mouse in all modes
+set mouse=
+set ttymouse=
 " Disable error bells
 set noerrorbells
 " And when I press Esc, please don't beep
