@@ -22,3 +22,6 @@
 [submodule "src/vimbufsync"]
 	path = src/vimbufsync
 	url = https://github.com/def-lkb/vimbufsync.git
+[submodule "src/vim-plugin-AnsiEsc"]
+	path = src/vim-plugin-AnsiEsc
+	url = https://github.com/powerman/vim-plugin-AnsiEsc.git
