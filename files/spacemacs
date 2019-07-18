@@ -238,12 +238,12 @@ layers configuration. You are free to put any user code."
   (global-linum-mode) ; Show line numbers by default
 
   ;; neotree
-  (setq neo-theme 'arrow)
+  (setq neo-theme 'ascii)
 
   ;; git
   (setq-default git-magit-status-fullscreen nil)
-  (setq magit-repository-directories '("~/Documents/git/"))
-  (global-git-commit-mode t)
+  ;; (setq magit-repository-directories '("~/Documents/git/"))
+  ;; (global-git-commit-mode t)
 
   ;; ensime
   (setq ensime-sem-high-enabled-p nil) ;; TODO get this working without looking ridiculous...
