@@ -1,3 +1,5 @@
+# Use bash
+export SHELL=bash
 # Make vim the default editor
 export ALTERNATE_EDITOR=""
 export EDITOR=emacsclient
@@ -36,9 +38,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so="${bold}${blue}"
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us="${bold}${purple}"
-
-# Always enable colored `grep` output
-export GREP_OPTIONS="--color=auto";
 
 #-------------------------------------------------------------------------------
 # OSX-Specific Stuff
