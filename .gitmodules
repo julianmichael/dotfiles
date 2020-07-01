@@ -25,3 +25,9 @@
 [submodule "src/vim-plugin-AnsiEsc"]
 	path = src/vim-plugin-AnsiEsc
 	url = https://github.com/powerman/vim-plugin-AnsiEsc.git
+[submodule "src/mosh"]
+	path = src/mosh
+	url = https://github.com/mobile-shell/mosh.git
+[submodule "tpm"]
+	path = src/tpm
+	url = https://github.com/tmux-plugins/tpm

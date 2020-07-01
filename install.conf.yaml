@@ -2,6 +2,8 @@
 
 - shell:
   - [git submodule update --init, Installing submodules]
+  - mkdir -p ~/.tmux
+  - mkdir -p ~/.tmux/plugins
 
 - link:
     ~/.dotfiles: ''
@@ -19,6 +21,7 @@
     ~/.gitconfig: files/gitconfig
     ~/.gitignore-global: files/gitignore-global
 
+    ~/.tmux/plugins/tpm: src/tpm
     ~/.tmux.conf: files/tmux.conf
 
     ~/.sbt/0.13/plugins/plugins.sbt:
