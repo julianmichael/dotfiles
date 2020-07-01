@@ -1,6 +1,9 @@
 # I have gone to the dark side
 alias vim=emacsclient
 
+# Always enable colored `grep` output
+alias grep="grep --color=auto"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
