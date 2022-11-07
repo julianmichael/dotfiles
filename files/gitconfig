@@ -159,3 +159,6 @@
 [user]
 	name = Julian Michael
 	email = julianjohnmichael@gmail.com
+[pull]
+	ff = only
+	rebase = false

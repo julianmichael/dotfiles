@@ -32,7 +32,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(ruby
+     python
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -47,14 +48,17 @@ This function should only modify configuration layer settings."
      html
      javascript
      latex
-     lsp
+     (lsp :variables
+          lsp-enable-file-watchers nil
+          lsp-file-watch-threshold 1000)
      markdown
      ;; pandoc
      (scala :variables
             scala-backend 'scala-metals
             scala-auto-start-backend t)
      shell
-     treemacs
+     ;; (treemacs :variables
+     ;;           treemacs-use-follow-mode nil)
      yaml
      ;; multiple-cursors
      ;; org
@@ -74,7 +78,9 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages
-   '(lsp-metals
+   '(
+     lsp-metals
+     evil-collection
      )
 
    ;; A list of packages that cannot be updated.
@@ -550,20 +556,21 @@ before packages are loaded."
   ;; neotree
   ;; (setq neo-theme 'ascii)
 
+  ;; evil-collection
+  (evil-collection-init)
+
   ;; git
   (setq-default git-magit-status-fullscreen nil)
   ;; (setq magit-repository-directories '("~/Documents/git/"))
   ;; (global-git-commit-mode t)
 
-  ;; ensime
-  ;; (setq ensime-sem-high-enabled-p nil) ;; TODO get this working without looking ridiculous...
-  ;; (setq ensime-use-helm t)
-  ;; (setq ensime-startup-notification nil)
-
   ;; scala .sc scripts
   (progn
     (add-to-list 'auto-mode-alist '("\\.sc\\'" . scala-mode))
     (modify-coding-system-alist 'file "\\.sc\\'" 'utf-8))
+
+  (setq-default dotspacemacs-configuration-layers
+                '((latex :variables latex-build-command "pdflatex")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

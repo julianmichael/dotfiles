@@ -42,3 +42,13 @@ the JDK
 npm:
 
 tldr
+
+python and git remote dropbox etc:
+
+sudo port install python39
+port select python stuff
+python -m venv env
+source env/bin/activate
+pip install dropbox git-remote-dropbox
+download token from dropbox
+clone dotfiles-local, etc.
