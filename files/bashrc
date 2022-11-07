@@ -101,3 +101,4 @@ fi
 # Vim fix: this is to fix an issue with backspace in tmux on some systems
 #-------------------------------------------------------------------------------
 # stty erase 
+. "$HOME/.cargo/env"

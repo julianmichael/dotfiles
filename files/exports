@@ -2,7 +2,7 @@
 export SHELL=bash
 # Make vim the default editor
 export ALTERNATE_EDITOR=""
-export EDITOR=emacsclient
+export EDITOR=vi
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768;
